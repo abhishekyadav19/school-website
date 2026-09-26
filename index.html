@@ -1380,6 +1380,80 @@
             dialog.modal[open] { animation: none; }
         }
 
+        /* ===== Legal (Privacy Policy / Disclaimer) popup content ===== */
+        .legal-body h4 {
+            color: var(--secondary);
+            font-size: 1.15em;
+            margin: 22px 0 8px;
+        }
+
+        .legal-body h4:first-child {
+            margin-top: 0;
+        }
+
+        .legal-body p {
+            color: #444;
+            margin-bottom: 10px;
+        }
+
+        .legal-body ul {
+            list-style: none;
+            margin-bottom: 10px;
+        }
+
+        .legal-body ul li {
+            padding: 6px 0 6px 28px;
+            position: relative;
+            color: #444;
+        }
+
+        .legal-body ul li::before {
+            content: "•";
+            position: absolute;
+            left: 8px;
+            color: var(--primary);
+            font-weight: 800;
+        }
+
+        .legal-updated {
+            display: inline-block;
+            margin-top: 4px;
+            padding: 5px 16px;
+            border-radius: 50px;
+            background: #f1f3f5;
+            color: #555;
+            font-size: 0.85em;
+            font-weight: 700;
+        }
+
+        .footer-legal {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-top: 16px;
+        }
+
+        .footer-legal button {
+            background: none;
+            border: none;
+            color: #bbb;
+            font: inherit;
+            font-weight: 600;
+            text-decoration: underline;
+            cursor: pointer;
+            padding: 4px 6px;
+        }
+
+        .footer-legal button:hover,
+        .footer-legal button:focus-visible {
+            color: white;
+        }
+
+        .footer-legal span {
+            color: #555;
+        }
+
         /* Responsive */
         @media (max-width: 768px) {
             .container {
@@ -1921,7 +1995,7 @@
                         <div class="site-cta">
                             <div class="site-cta-text">
                                 <span class="cta-title">👉 कक्षा 1 से 8 की पूरी जानकारी हमारी वेबसाइट पर देखें</span>
-                                <span class="cta-url">83206371-61d9-48c1-be0e-0075967d2087.lovableproject.com</span>
+                                <span class="cta-url">https://dyseniorsecondaryschool.lovable.app</span>
                             </div>
                             <a class="btn-visit" href="https://dyseniorsecondaryschool.lovable.app/" target="_blank" rel="noopener">🌐 वेबसाइट खोलें</a>
                         </div>
@@ -2178,6 +2252,11 @@
             <div class="footer-bottom">
                 <p>&copy; 2026 Shri Devdhari Yadav Inter College. All Rights Reserved.</p>
                 <p style="margin-top: 10px;">Designed for Quality Education in Shahjahanpur</p>
+                <div class="footer-legal">
+                    <button type="button" data-modal="privacy-modal">Privacy Policy</button>
+                    <span>•</span>
+                    <button type="button" data-modal="disclaimer-modal">Disclaimer</button>
+                </div>
             </div>
         </div>
     </footer>
@@ -2284,7 +2363,7 @@
                             <span>पुस्तकालय</span>
                             <span>व्यक्तित्व विकास</span>
                         </div>
-                        <a class="m-btn" href="https://83206371-61d9-48c1-be0e-0075967d2087.lovableproject.com/" target="_blank" rel="noopener">🌐 वेबसाइट खोलें</a>
+                        <a class="m-btn" href="https://dyseniorsecondaryschool.lovable.app/" target="_blank" rel="noopener">🌐 वेबसाइट खोलें</a>
                     </div>
                 </div>
 
@@ -2307,6 +2386,106 @@
                 </div>
 
                 <button type="button" class="m-btn alt" data-modal="admission-modal">📝 प्रवेश की जानकारी देखें</button>
+            </div>
+        </div>
+    </dialog>
+
+    <!-- ===== Privacy Policy popup ===== -->
+    <dialog class="modal" id="privacy-modal" aria-labelledby="privacy-title">
+        <div class="modal-inner">
+            <div class="modal-head">
+                <div>
+                    <h3 id="privacy-title">🔒 गोपनीयता नीति (Privacy Policy)</h3>
+                    <p>यह नीति बताती है कि श्री देवधारी यादव इन्टर कॉलेज इस वेबसाइट पर आपकी जानकारी को कैसे एकत्र, उपयोग और सुरक्षित रखता है।</p>
+                </div>
+                <button type="button" class="modal-close" data-close aria-label="बंद करें">✕</button>
+            </div>
+            <div class="modal-body legal-body">
+                <span class="legal-updated">last updated: 27 September 2026</span>
+
+                <h4>1. हम कौन-सी जानकारी एकत्र करते हैं</h4>
+                <p>जब आप इस वेबसाइट पर कॉल बटन, ईमेल लिंक, या प्रवेश/कार्यक्रम पॉपअप का उपयोग करते हैं, तो हम केवल वही जानकारी प्राप्त करते हैं जो आप स्वयं फ़ोन कॉल, ईमेल या विद्यालय आकर हमें बताते हैं, जैसे:</p>
+                <ul>
+                    <li>अभिभावक/छात्र का नाम और संपर्क नंबर</li>
+                    <li>ईमेल पता (यदि आप ईमेल भेजते हैं)</li>
+                    <li>प्रवेश हेतु दिए गए दस्तावेज़ (जन्म प्रमाण पत्र, आधार कार्ड, मार्कशीट आदि) — केवल तभी जब आप स्वयं विद्यालय में जमा करते हैं</li>
+                </ul>
+                <p>यह वेबसाइट स्वयं कोई फॉर्म डेटा सर्वर पर सेव नहीं करती — बटन सीधे आपके फ़ोन के डायलर, ईमेल ऐप या संबंधित उप-वेबसाइट (kidszenlittlescholars.lovable.app, dyseniorsecondaryschool.lovable.app, shridhevdhariyadavintercollege.pages.dev) पर ले जाते हैं।</p>
+
+                <h4>2. जानकारी का उपयोग</h4>
+                <p>एकत्र की गई जानकारी का उपयोग केवल निम्न कार्यों के लिए किया जाता है:</p>
+                <ul>
+                    <li>प्रवेश प्रक्रिया पूरी करने के लिए</li>
+                    <li>अभिभावकों से संपर्क और जानकारी साझा करने के लिए</li>
+                    <li>विद्यालय की सेवाओं में सुधार के लिए</li>
+                </ul>
+                <p>हम आपकी जानकारी किसी तीसरे पक्ष को बेचते या किराए पर नहीं देते।</p>
+
+                <h4>3. कुकीज़ और तकनीकी जानकारी</h4>
+                <p>यह वेबसाइट सामान्य ब्राउज़िंग हेतु कोई ट्रैकिंग कुकीज़ उपयोग नहीं करती। Google Fonts जैसी बाहरी सेवाएं फॉन्ट लोड करने के लिए उपयोग होती हैं, जो मानक तकनीकी जानकारी (जैसे ब्राउज़र प्रकार) प्राप्त कर सकती हैं।</p>
+
+                <h4>4. बाहरी वेबसाइट लिंक</h4>
+                <p>इस वेबसाइट में हमारे तीन शैक्षणिक चरणों (नर्सरी, कक्षा 1–8, कक्षा 9–12) की अलग-अलग वेबसाइटों के लिंक हैं। उन वेबसाइटों की अपनी गोपनीयता नीति हो सकती है; कृपया वहां जाकर उसे भी पढ़ें।</p>
+
+                <h4>5. बच्चों की जानकारी</h4>
+                <p>चूंकि यह एक विद्यालय की वेबसाइट है, प्रवेश से जुड़ी जानकारी नाबालिग बच्चों की भी हो सकती है। ऐसी जानकारी केवल अभिभावक की सहमति और उपस्थिति में, प्रवेश प्रक्रिया के लिए ही ली जाती है, और इसे अनावश्यक रूप से साझा नहीं किया जाता।</p>
+
+                <h4>6. जानकारी की सुरक्षा</h4>
+                <p>हम आपकी जानकारी को सुरक्षित रखने का हर संभव प्रयास करते हैं, लेकिन इंटरनेट पर किसी भी जानकारी के स्थानांतरण की 100% सुरक्षा की गारंटी नहीं दी जा सकती।</p>
+
+                <h4>7. नीति में बदलाव</h4>
+                <p>समय-समय पर इस नीति को अपडेट किया जा सकता है। किसी भी बदलाव की जानकारी इसी पेज पर उपलब्ध रहेगी।</p>
+
+                <div class="m-contact">
+                    <h4>❓ गोपनीयता से जुड़े सवालों के लिए संपर्क करें</h4>
+                    <div class="m-actions">
+                        <a class="m-btn" href="tel:+917236019990">📞 7236019990</a>
+                        <a class="m-btn alt" href="mailto:devdhariyadvintercollege@gmail.com">✉️ devdhariyadvintercollege@gmail.com</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </dialog>
+
+    <!-- ===== Disclaimer popup ===== -->
+    <dialog class="modal" id="disclaimer-modal" aria-labelledby="disclaimer-title">
+        <div class="modal-inner">
+            <div class="modal-head">
+                <div>
+                    <h3 id="disclaimer-title">⚠️ अस्वीकरण (Disclaimer)</h3>
+                    <p>कृपया इस वेबसाइट का उपयोग करने से पहले नीचे दी गई बातें ध्यान से पढ़ें।</p>
+                </div>
+                <button type="button" class="modal-close" data-close aria-label="बंद करें">✕</button>
+            </div>
+            <div class="modal-body legal-body">
+                <span class="legal-updated">last updated: 27 September 2026</span>
+
+                <h4>1. सामान्य जानकारी</h4>
+                <p>इस वेबसाइट पर दी गई सभी जानकारी (शुल्क, समय-सारणी, सुविधाएं, कक्षाएं आदि) केवल सामान्य जानकारी के उद्देश्य से है। विद्यालय प्रशासन यह सुनिश्चित करने का प्रयास करता है कि जानकारी सही और अद्यतन हो, लेकिन इसकी पूर्णता, सटीकता या समयबद्धता की कोई गारंटी नहीं दी जाती।</p>
+
+                <h4>2. शुल्क, समय और नियमों में बदलाव</h4>
+                <p>वेबसाइट पर दर्शाई गई प्रवेश शुल्क (₹5,000 / ₹7,000 / ₹10,000), 10% की प्रारंभिक छूट, विद्यालय का समय (सुबह 8:00 – दोपहर 2:00) और अन्य नियम विद्यालय प्रबंधन के विवेक अनुसार बिना पूर्व सूचना के बदले जा सकते हैं। कृपया अंतिम और सटीक जानकारी के लिए सीधे विद्यालय से फ़ोन (7236019990 / 9455273200) या व्यक्तिगत रूप से संपर्क करें।</p>
+
+                <h4>3. परिणाम और उपलब्धियों संबंधी जानकारी</h4>
+                <p>वेबसाइट पर दिए गए आंकड़े (जैसे "100% परीक्षा परिणाम", "500+ छात्र-छात्राएं", "50+ शिक्षक") विद्यालय द्वारा उपलब्ध कराए गए सामान्य विवरण हैं। भविष्य के परिणाम या प्रवेश की उपलब्धता की कोई गारंटी नहीं दी जाती।</p>
+
+                <h4>4. बाहरी वेबसाइट और लिंक</h4>
+                <p>इस वेबसाइट में नर्सरी (KidsZen Little Scholars), कक्षा 1–8 और कक्षा 9–12 से जुड़ी अलग-अलग वेबसाइटों के लिंक दिए गए हैं। इन बाहरी वेबसाइटों की सामग्री, उपलब्धता या सटीकता के लिए श्री देवधारी यादव इन्टर कॉलेज उत्तरदायी नहीं है।</p>
+
+                <h4>5. चित्र और चिह्न (Images & Icons)</h4>
+                <p>वेबसाइट पर उपयोग किए गए चित्र, आइकन और चित्रण केवल प्रदर्शन (representation) के उद्देश्य से हैं और वास्तविक परिसर, कक्षाओं या छात्रों का प्रत्यक्ष फोटो नहीं दर्शाते।</p>
+
+                <h4>6. दायित्व की सीमा</h4>
+                <p>किसी भी परिस्थिति में विद्यालय इस वेबसाइट के उपयोग से उत्पन्न किसी प्रत्यक्ष या अप्रत्यक्ष हानि के लिए उत्तरदायी नहीं होगा। प्रवेश और अन्य महत्वपूर्ण निर्णय लेने से पहले कृपया विद्यालय में व्यक्तिगत रूप से जानकारी सत्यापित करें।</p>
+
+                <div class="m-contact">
+                    <h4>📞 सही और ताज़ा जानकारी के लिए सीधे संपर्क करें</h4>
+                    <div class="m-actions">
+                        <a class="m-btn" href="tel:+917236019990">📞 7236019990</a>
+                        <a class="m-btn" href="tel:+919455273200">📞 9455273200</a>
+                        <a class="m-btn alt" href="mailto:devdhariyadvintercollege@gmail.com">✉️ ईमेल भेजें</a>
+                    </div>
+                </div>
             </div>
         </div>
     </dialog>
